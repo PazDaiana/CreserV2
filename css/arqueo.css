@@ -1,0 +1,63 @@
+.body{
+    background-color: aquamarine;
+}
+
+.section {
+    background-color: #bbe27cfb;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-top: 0;
+    color: #000;
+}
+.section p {
+    margin-top: 0;
+    color: #000;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table th {
+
+}
+.table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #fff;
+}
+
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #fff
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.list-group-item strong {
+    display: block;
+}
+
+
+
+.btn-link {
+    color: #2650fa;
+    text-decoration: none;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}

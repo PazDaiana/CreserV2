@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueo de Caja</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/arqueo.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index principal/index.html">
+                <img src="../Imagenes/LOGO CRESER.jpg" alt="Avatar" class="avatar">
+            </a>
+            <h3>CreSer</h3>
+            <h6><i>Servicio de Créditos Personales</i></h6>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../index principal/index.html"><i class="fas fa-users"></i> Clientes </a></li>
+            <li><a href="../prestamos/formulario.html"><i class="fas fa-hand-holding-usd"></i> Préstamos</a></li>
+            <li><a href="../cuotas/caja.html"><i class="fa-solid fa-sack-dollar"></i>Cuotas</a></li>
+            <li><a href="../arqueo/arqueo.html" class="activo"><i class="fas fa-cash-register"></i> Caja </a></li>
+            <li><a href="../configuracion/configuracion.html"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="header-icons">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <h2>Arqueo de Caja</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="section">
+                            <h3>Cuotas del Día</h3>
+                            <ul id="cuotasList" class="list-group">
+                                <li class="list-group-item">
+                                    <strong>Recibo #001</strong> - Cuota 1<br>
+                                    Juan Pérez - Préstamo #123
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Recibo #002</strong> - Cuota 2<br>
+                                    María López - Préstamo #124
+                                </li>
+                                <!-- Más cuotas aquí -->
+                            </ul>
+                            <button type="button" class="btn btn-link" id="verMasCuotas">Ver más cuotas</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="section">
+                            <h3>Préstamos del Día</h3>
+                            <ul id="prestamosList" class="list-group">
+                                <li class="list-group-item">
+                                    <strong>Fecha:</strong> 2023-06-26<br>
+                                    <strong>Monto:</strong> $10,000<br>
+                                    <strong>Préstamo #001</strong> - DNI: 12345678 - Pérez
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Fecha:</strong> 2023-06-26<br>
+                                    <strong>Monto:</strong> $5,000<br>
+                                    <strong>Préstamo #002</strong> - DNI: 87654321 - López
+                                </li>
+                                <!-- Más préstamos aquí -->
+                            </ul>
+                            <button type="button" class="btn btn-link" id="verMasPrestamos">Ver más préstamos</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="section">
+                            <h3>Gastos del Día</h3>
+                            <ul id="gastosList" class="list-group">
+                                <li class="list-group-item">
+                                    <strong>Concepto:</strong> Viáticos<br>
+                                    <strong>Monto:</strong> $200
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Concepto:</strong> Librería<br>
+                                    <strong>Monto:</strong> $150
+                                </li>
+                                <!-- Más gastos aquí -->
+                            </ul>
+                            <button type="button" class="btn btn-link" id="verMasGastos">Ver más gastos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section">
+                            <h3>Resumen de Caja</h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Concepto</th>
+                                        <th>Ingreso</th>
+                                        <th>Egreso</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Total Préstamos</td>
+                                        <td></td>
+                                        <td><input type="number" id="totalPrestamos" value="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Recibos</td>
+                                        <td><input type="number" id="totalRecibos" value="0"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gastos Varios</td>
+                                        <td></td>
+                                        <td><input type="number" id="gastosVarios" value="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cantidad de billetes en caja</td>
+                                        <td><input type="number" id="billetesCaja" value="0"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Depósitos</td>
+                                        <td></td>
+                                        <td><input type="number" id="depositos" value="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pago Proveedores</td>
+                                        <td></td>
+                                        <td><input type="number" id="pagoProveedores" value="0"></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td><span id="totalIngreso">0</span></td>
+                                        <td><span id="totalEgreso">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balance</td>
+                                        <td colspan="2"><span id="balance">0</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <button type="button" class="btn btn-primary" onclick="calcularBalance()">Calcular Balance</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="section">
+                            <h3>Recuento de Fondo de Cambio</h3>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Denominación</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                                <tr>
+                                    <td>$1000</td>
+                                    <td><input type="number" id="den1000" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$500</td>
+                                    <td><input type="number" id="den500" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$200</td>
+                                    <td><input type="number" id="den200" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$100</td>
+                                    <td><input type="number" id="den100" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$50</td>
+                                    <td><input type="number" id="den50" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$20</td>
+                                    <td><input type="number" id="den20" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$10</td>
+                                    <td><input type="number" id="den10" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$5</td>
+                                    <td><input type="number" id="den5" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$2</td>
+                                    <td><input type="number" id="den2" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>$1</td>
+                                    <td><input type="number" id="den1" value="0"></td>
+                                </tr>
+                            </table>
+                            <p>Recuento: <input type="text" id="recuento" value="0.00"></p>
+                            <p>Fondo cambio: <input type="text" id="fondoCambioRecuento" value="0.00"></p>
+                            <p>Total Recaudado: <span id="totalRecaudado">0.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-success">Realizar Parcial</button>
+                        <button type="button" class="btn btn-primary">Volver</button>
+                        <button type="button" class="btn btn-danger">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

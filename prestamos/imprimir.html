@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir - CreSer</title>
+    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="imprimir-container">
+        <h2>Datos Completos del Cliente</h2>
+        <p>Nombre: <span id="nombre"></span></p>
+        <p>Apellido: <span id="apellido"></span></p>
+        <p>DNI: <span id="dni"></span></p>
+        <p>Dirección: <span id="direccion"></span></p>
+        <p>Localidad: <span id="localidad"></span></p>
+        <p>Provincia: <span id="provincia"></span></p>
+        
+        <h2>Datos del Prestamo</h2>
+        <p>Monto: <span id="monto"></span></p>
+        <p>Intereses: <span id="intereses"></span></p>
+        <p>Fecha: <span id="fecha"></span></p>
+        <p>Cuotas: <span id="cuotas"></span></p>
+        
+        <div class="botones">
+            <button onclick="window.print()"><i class="fa fa-print"></i> Imprimir</button>
+            <button onclick="window.location.href='../prestamos/formulario.html'">Cancelar y Volver Atrás</button>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* Estilos adicionales */
+.ventana {
+    margin: 20px;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.ventana h2 {
+    text-align: center;
+}
+
+.campo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    width: 30%;
+    font-weight: bold;
+}
+
+.campo span {
+    width: 65%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background-color: #f9f9f9;
+}
+
+.legal {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 0.9em;
+}
+
+.btn-imprimir {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+@media print {
+    .sidebar, .header, .btn-imprimir {
+        display: none;
+    }
+    .ventana {
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.firma {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+
+.firma::before {
+    content: '';
+    display: block;
+    width: 50%;
+    border-top: 1px solid #000;
+    margin: 20px auto 10px auto;
+}

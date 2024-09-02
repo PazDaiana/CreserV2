@@ -1,0 +1,314 @@
+<html>
+    <head>
+        <title>
+            CreSer
+        </title>
+        <link rel="shortcut icon" href="Imagenes/LOGO CRESER.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- esta es la parte donde no ven, sirve para el navegador -->
+    </head>
+
+    <body>
+        <!--  aca se pone todo lo que se ve en la pagina    -->
+        <h1>
+            Titulo
+        </h1>
+        
+        <p>
+            Hola Mundo
+        </p>
+
+        <p>
+            Este es otro parrafo <u> subrayado </u> <i> en cursiva </i> <b> en negrita </b> 1<sub>2</sub>  4<sup>2</sup>
+        </p>
+        <img src="Imagenes/LOGO CRESER.jpg" alt="Imagen no encontrada" width="500px" height="1000px">
+        <table width="50%" >
+            <theader>
+            <tr>
+                <th>DNI</b> </th> 
+                <th>Nombre </th> 
+                <th>Direccion </th> 
+                <th></th> 
+            
+            </tr>
+            </theader>
+            <tbody>
+            <tr>
+                <td width="50%">36835768 </td> 
+                <td width="50%">Paz Daiana</td> 
+                <td width="50%">Mariano Moreno</td>
+
+                <td width="50%">  Ver  Editar  Modificar </td>
+            </tr>
+            </tbody>
+        </table>
+        <table >
+            <theader border="1" width="100%">
+            <tr>
+               <p>
+
+                 ver   que pongo
+               </p>
+            
+            </tr>
+            </theader>
+            
+
+
+
+
+
+
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Plan</title>
+    <link rel="stylesheet" href="caja.html">
+    <link rel="stylesheet" href="css/caja.css">
+    
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cliente-info">
+            <label for="cliente">Cliente:</label>
+            <input type="text" id="cliente" value="TORRES MIGUEL RAUL" readonly>
+            <label for="DNI">DNI:</label>
+            <input type="text" id="DNI" value="26848143" readonly>
+            <label for="DNI">DNI:</label>
+            <input type="checkbox" id="mostrar-saldo" checked>
+            <label for="mostrar-saldo">Mostrar solo Créditos Pendientes</label>
+            <label for="saldo">Saldo:</label>
+            <input type="text" id="saldo" value="$297.800,00" readonly>
+            
+        </div>
+        
+        <div class="busqueda">
+            <label for="buscar">Buscar:</label>
+            <input type="text" id="buscar" placeholder="Buscar...">
+        </div>
+
+        <div class="content">
+            <div class="prestamos">
+                <h3>Préstamos</h3>
+                <table id="tabla-prestamos">
+                    <thead>
+                        <tr>
+                            <th>Nro. Préstamo</th>
+                            <th>Fecha</th>
+                            <th>Frecuencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0099</td>
+                            <td>20-05-2022</td>
+                            <td>SEMANAL</td>
+                        </tr>
+                        <!-- Repetir según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="detalle-plan">
+                <h3>Detalle del Plan:</h3>
+                <label for="inicio-credito">F. Inicio Créd:</label>
+                <input type="date" id="inicio-credito" value="2022-05-20">
+
+                <label for="financiera">Financiera:</label>
+                <input type="text" id="financiera" value="SEMANAL" readonly>
+
+                <label for="total-cuotas">Tot. Cuota(s):</label>
+                <input type="number" id="total-cuotas" value="25" readonly>
+
+                <label for="interes-mora">Int. Mora Diario:</label>
+                <input type="number" id="interes-mora" value="0" readonly>
+
+                <label for="cobrador">Cobrador:</label>
+                <input type="text" id="cobrador" value="ALARCON NESTOR" readonly>
+
+                <label for="tolerancia">D. Tolerancia:</label>
+                <input type="number" id="tolerancia" value="0">
+            </div>
+        </div>
+
+        <table id="tabla-plan" >
+            <thead>
+                <tr>
+                    <th>Selecc.</th>
+                    <th>Nro. Cuota</th>
+                    <th>Fecha Plan</th>
+                    <th>D. Semana</th>
+                    <th>F. Últ. Pago</th>
+                    <th>Debe</th>
+                    <th>Haber</th>
+                    <th>Interes Mora</th>
+                    <th>Día(s) Mora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de datos -->
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>4</td>
+                    <td>18-06-2022</td>
+                    <td>Sábado</td>
+                    <td>25-06-2022</td>
+                    <td>$16.200,00</td>
+                    <td>$16.200,00</td>
+                    <td>$0,00</td>
+                    <td>0</td>
+                </tr>
+                <!-- Repetir según sea necesario -->
+            </tbody>
+        </table>
+
+        <div class="total-seleccionado">
+            <label for="total">Total:</label>
+            <input type="number" id="total" value="22400" readonly>
+
+            <label for="total-seleccionado">Seleccionado:</label>
+            <input type="number" id="total-seleccionado" value="22400" readonly>
+
+            <label for="total-entregado">Total Entregado:</label>
+            <input type="number" id="total-entregado" value="22400">
+        </div>
+
+        <div class="acciones">
+            <button id="actualizar-entrega">Actualizar Entrega en Crédito</button>
+            <span>Total Crédito: $275.400,00</span>
+        </div>
+
+        <div class="botones">
+            <button id="guardar">Guardar</button>
+            <button id="guardar-imprimir">Guardar / Imprimir</button>
+            <button id="cancelar">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.cliente-info, .busqueda, .total-seleccionado, .acciones, .botones {
+    margin-bottom: 20px;
+}
+
+.cliente-info label, .busqueda label, .detalle-plan label, .total-seleccionado label {
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="number"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prestamos, .detalle-plan {
+    width: 48%;
+}
+
+.prestamos h3, .detalle-plan h3 {
+    margin-top: 0;
+}
+
+#tabla-prestamos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tabla-prestamos th, #tabla-prestamos td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+#tabla-prestamos th {
+    background-color: #eaeaea;
+}
+
+#tabla-prestamos td {
+    background-color: #ffcc99;
+}
+
+#tabla-plan {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tabla-plan th, #tabla-plan td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+#tabla-plan th {
+    background-color: #eaeaea;
+}
+
+#tabla-plan td input[type="checkbox"] {
+    margin: 0;
+}
+
+.acciones button, .botones button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#actualizar-entrega {
+    background-color: #ffc107;
+    color: white;
+}
+
+#guardar {
+    background-color: #28a745;
+    color: white;
+}
+
+#guardar-imprimir {
+    background-color: #17a2b8;
+    color: white;
+}
+
+#cancelar {
+    background-color: #dc3545;
+    color: white;
+}

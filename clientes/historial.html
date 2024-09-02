@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial del Cliente</title>
+    <link rel="stylesheet" href="../css/menufijo.css">
+    <link rel="stylesheet" href="../css/estilo_historial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index principal/index.html">
+                <img src="../Imagenes/LOGO CRESER.jpg" alt="Avatar" class="avatar">
+            </a>
+            <h3>CreSer</h3>
+            <h6><i>Servicio de Créditos Personales</i></h6>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../clientes/index2.html"><i class="fas fa-users"></i> Clientes </a></li>
+            <li><a href="../prestamos/formulario.html"><i class="fas fa-hand-holding-usd"></i> Préstamos</a></li>
+            <li><a href="../cuotas/caja.html"><i class="fa-solid fa-sack-dollar"></i> Cuotas</a></li>
+            <li><a href="../arqueo/arqueo.html"><i class="fas fa-cash-register"></i> Caja </a></li>
+            <li><a href="../configuracion/configuracion.html"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="contenedor">
+            <button class="volver-btn" onclick="window.location.href='../clientes/index2.html'"><i class="fas fa-arrow-left"></i> Volver Atrás</button>
+            <h1>Historial del Cliente</h1>
+            
+            <div class="cliente-info">
+                <label for="cliente">Nombre:</label>
+                <input type="text" id="nombre" value="Miguel Raul" readonly>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" value="Torres" readonly>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" value="26848143" readonly>
+            </div>
+
+            <div class="prestamos">
+                <h3>Préstamos</h3>
+                <table id="tabla-prestamos">
+                    <thead>
+                        <tr>
+                            <th>Nro. Préstamo</th>
+                            <th>Fecha</th>
+                            <th>Monto</th>
+                            <th>Cantidad de Cuotas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0099</td>
+                            <td>20-05-2022</td>
+                            <td>$100,000.00</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>0100</td>
+                            <td>15-03-2023</td>
+                            <td>$50,000.00</td>
+                            <td>15</td>
+                        </tr>
+                        <!-- Repetir según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="detalle-cuotas">
+                <h3>Cuotas Pagadas</h3>
+                <h4>Préstamo 0099</h4>
+                <table id="tabla-cuotas-0099">
+                    <thead>
+                        <tr>
+                            <th>Fecha de Pago</th>
+                            <th>Nro. Cuota</th>
+                            <th>Importe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>27-05-2022</td>
+                            <td>1</td>
+                            <td>$4,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>03-06-2022</td>
+                            <td>2</td>
+                            <td>$4,000.00</td>
+                        </tr>
+                        <!-- Repetir según sea necesario -->
+                    </tbody>
+                </table>
+                
+                <h4>Préstamo 0100</h4>
+                <table id="tabla-cuotas-0100">
+                    <thead>
+                        <tr>
+                            <th>Fecha de Pago</th>
+                            <th>Nro. Cuota</th>
+                            <th>Importe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>22-03-2023</td>
+                            <td>1</td>
+                            <td>$3,333.33</td>
+                        </tr>
+                        <tr>
+                            <td>29-03-2023</td>
+                            <td>2</td>
+                            <td>$3,333.33</td>
+                        </tr>
+                        <!-- Repetir según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/recuperardatos.js"></script>
+</body>
+</html>

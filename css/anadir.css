@@ -1,0 +1,54 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 250px;
+    background-color: #343a40;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.sidebar-heading {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-heading .logo {
+    width: 100%;
+    height: auto;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item-action:hover {
+    background-color: #495057;
+    color: #495057;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+    
+}
+
+
+
+
+
+.table-title .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,101 @@
+
+/* estilo2.css */
+.contenedor {
+    width: 95%;
+    padding: 20px;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.boton-regresar {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.estado-dropdown {
+    margin-right: 10px;
+}
+
+.caja-busqueda {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.boton-anadir {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.boton-ver {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.boton-editar {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.boton-eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.paginacion button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#pagina-actual {
+    margin: 0 10px;
+}

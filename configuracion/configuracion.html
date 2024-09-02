@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - CreSer</title>
+    <link rel="stylesheet" href="../css/menufijo.css">
+    <link rel="stylesheet" href="../css/estilo2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .ventana {
+            margin: 20px;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .ventana h2 {
+            text-align: center;
+        }
+
+        .campo {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .campo label {
+            width: 30%;
+            font-weight: bold;
+        }
+
+        .campo input {
+            width: 65%;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            background-color: #f9f9f9;
+        }
+
+        .boton-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-guardar,
+        .btn-volver {
+            width: 45%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn-volver {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index principal/index.html">
+                <img src="../Imagenes/LOGO CRESER.jpg" alt="Avatar" class="avatar">
+            </a>
+            <h3>CreSer</h3>
+            <h6><i>Servicio de Créditos Personales</i></h6>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../clientes/index2.html"><i class="fas fa-users"></i> Clientes </a></li>
+            <li><a href="../prestamos/formulario.html"><i class="fas fa-hand-holding-usd"></i> Préstamos</a></li>
+            <li><a href="../cuotas/caja1.html"><i class="fa-solid fa-sack-dollar"></i> Cuotas</a></li>
+            <li><a href="../arqueo/arqueo.html"><i class="fas fa-cash-register"></i> Caja </a></li>
+            <li><a href="../configuracion/configuracion.html" class="activo"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="header-icons">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+        </div>
+        <div class="ventana">
+            <h2>Configuración de Usuarios</h2>
+            <div class="campo">
+                <label for="nombreUsuario">Nombre de Usuario:</label>
+                <input type="text" id="nombreUsuario">
+            </div>
+            <div class="campo">
+                <label for="contraseñaUsuario">Contraseña:</label>
+                <input type="password" id="contraseñaUsuario">
+            </div>
+            <div class="campo">
+                <label for="confirmarContraseña">Confirmar Contraseña:</label>
+                <input type="password" id="confirmarContraseña">
+            </div>
+            <h2>Datos del Empleado</h2>
+            <div class="campo">
+                <label for="nombreEmpleado">Nombre:</label>
+                <input type="text" id="nombreEmpleado">
+            </div>
+            <div class="campo">
+                <label for="apellidoEmpleado">Apellido:</label>
+                <input type="text" id="apellidoEmpleado">
+            </div>
+            <div class="campo">
+                <label for="dniEmpleado">DNI:</label>
+                <input type="text" id="dniEmpleado">
+            </div>
+            <h2>Configuración del Sistema</h2>
+            <div class="campo">
+                <label for="interesCuota">Interés por Cuota (%):</label>
+                <input type="text" id="interesCuota">
+            </div>
+            <div class="campo">
+                <label for="diasTolerancia">Días de Tolerancia:</label>
+                <input type="text" id="diasTolerancia">
+            </div>
+            <div class="boton-container">
+                <a href="javascript:guardarConfiguracion()" class="btn-guardar">Guardar</a>
+                <a href="../index principal/index.html" class="btn-volver">Volver</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function guardarConfiguracion() {
+            const nombreUsuario = document.getElementById('nombreUsuario').value;
+            const contraseñaUsuario = document.getElementById('contraseñaUsuario').value;
+            const confirmarContraseña = document.getElementById('confirmarContraseña').value;
+            const nombreEmpleado = document.getElementById('nombreEmpleado').value;
+            const apellidoEmpleado = document.getElementById('apellidoEmpleado').value;
+            const dniEmpleado = document.getElementById('dniEmpleado').value;
+            const interesCuota = document.getElementById('interesCuota').value;
+            const diasTolerancia = document.getElementById('diasTolerancia').value;
+
+            if (contraseñaUsuario !== confirmarContraseña) {
+                alert('Las contraseñas no coinciden');
+                return;
+            }
+
+            localStorage.setItem('nombreUsuario', nombreUsuario);
+            localStorage.setItem('contraseñaUsuario', contraseñaUsuario);
+            localStorage.setItem('nombreEmpleado', nombreEmpleado);
+            localStorage.setItem('apellidoEmpleado', apellidoEmpleado);
+            localStorage.setItem('dniEmpleado', dniEmpleado);
+            localStorage.setItem('interesCuota', interesCuota);
+            localStorage.setItem('diasTolerancia', diasTolerancia);
+
+            alert('Configuración guardada exitosamente');
+            window.location.href = 'menufijo.html';
+        }
+    </script>
+</body>
+</html>

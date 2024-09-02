@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Cliente - CreSer</title>
+    <link rel="stylesheet" href="../css/menufijo.css">
+    <link rel="stylesheet" href="../css/estilo2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index principal/index.html">
+                <img src="../Imagenes/LOGO CRESER.jpg" alt="Avatar" class="avatar">
+            </a>
+            <h3>CreSer</h3>
+            <h6><i>Servicio de Créditos Personales</i></h6>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../clientes/index2.html"><i class="fas fa-users"></i> Clientes </a></li>
+            <li><a href="../prestamos/formulario.html" class="activo"><i class="fas fa-hand-holding-usd"></i> Préstamos</a></li>
+            <li><a href="../cuotas/caja1.html"><i class="fa-solid fa-sack-dollar"></i> Cuotas</a></li>
+            <li><a href="../arqueo/arqueo.html"><i class="fas fa-cash-register"></i> Caja </a></li>
+            <li><a href="../configuracion/configuracion.html"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="header-icons">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+        </div>
+        <div class="ventana">
+            <div class="ventana-header">
+                <h2>Datos del Cliente</h2>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Buscar cliente por DNI o Nombre">
+                    <button onclick="buscarCliente()">Buscar</button>
+                </div>
+            </div>
+        
+            <!-- Codigo Modificado-->
+            <form action="procesar_formulario.php" method="post">
+                <div class="campo">
+                    <input type="text" name="nombre" placeholder="Nombre" id="nombre" required>
+                    <input type="text" name="apellido" placeholder="Apellido" id="apellido" required>
+                </div>
+                <div class="campo">
+                    <input type="text" name="dni" placeholder="DNI" id="dni" required>
+                    <input type="text" name="direccion" placeholder="Dirección" id="direccion" required>
+                </div>
+                <div class="campo">
+                    <input type="text" name="localidad" placeholder="Localidad" id="localidad" required>
+                    <input type="text" name="provincia" placeholder="Provincia" id="provincia" required>
+                </div>
+                <div class="legal">
+                    <p>
+                        <strong>CONSTANCIA ESCRITA DEL CUMPLIMIENTO CON EL DEBER DE INFORMACIÓN CONFORME LO IMPONE ART. 36 LEY 24.240 (LDC) Y OTRAS DISPOSICIONES LEGALES:</strong>
+                    </p>
+                    <p>
+                        Fecha: ............ Legajo Nro: ........ Apellido y Nombre: ...................... Documento N°: ................ CUIT/CUIL N°: ........................ <br>
+                        Crédito Personal Dinerario N°: ...... - ........... Capital: $........; Tasa Nominal Anual: ......%; Tasa de Interés Efectiva Anual: .............%; <br>
+                        Iva S/Intereses al: 21.00 % Monto Total Financiado: $........... Costo Financiero Total: ...........% <br>
+                        Sistema de Amortización y Cancelación de Intereses: Directo, el valor cada cuota se encuentra compuesto por la misma cantidad de capital e intereses compensatorios en proporción a la cantidad de cuotas <br>
+                        Desembolso inicial: $0 Cantidad y monto de los pagos a realizar: ................... cuotas iguales de $............ Primer Vencimiento: ............... <br>
+                        Periodicidad de los pagos a realizar: Mensual y consecutiva <br>
+                        Las sucesivas cuotas vencerán el día 5 de cada mes hasta su finalización. La falta de pago de una cuota causará la mora automática del deudor, sin necesidad de interpelación alguna y consecuentemente CFN S.R.L. podrá reclamar extrajudicial y judicialmente por la vía ejecutiva,
+                    </p>
+                </div>
+                <h2>Datos del Préstamo</h2>
+
+                <!--Parte Modificada-->
+                <div class="campo">
+                    <input type="text" name="monto" placeholder="Monto" id="monto-prestamo" required>
+                    <input type="date" name="fecha" id="fecha" required>
+                </div>
+                <div class="campo">
+                    <input type="text" name="intereses" placeholder="Intereses" id="intereses-prestamo" required>
+                </div>
+                <div class="campo">
+                    <select name="cuotas" id="seleccione-cuotas" required>
+                        <option value="" disabled selected>Seleccione Cuotas</option>
+                        <option value="3">3 CUOTAS</option>
+                        <option value="5">5 CUOTAS</option>
+                        <option value="9">9 CUOTAS</option>
+                        <option value="12">12 CUOTAS</option>
+                        <option value="24">24 CUOTAS</option>
+                    </select>
+                </div>
+                
+                <div class="botones">
+                    <input type="submit" class="btn-aceptar" value="Aceptar">
+                    <button type="button" onclick="cancelar()" class="btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/formulario.js"></script>
+</body>
+</html>

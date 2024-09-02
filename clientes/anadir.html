@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con PHP usando Programación Orientada a Objetos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/anadir.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/menufijo.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index principal/index.html">
+                <img src="../Imagenes/LOGO CRESER.jpg" alt="Avatar" class="avatar">
+            </a>
+            <h3>CreSer</h3>
+            <h6><i>Servicio de Créditos Personales</i></h6>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../clientes/index2.html" class="activo"><i class="fas fa-users"></i> Clientes </a></li>
+            <li><a href="../prestamos/formulario.html"><i class="fas fa-hand-holding-usd"></i> Préstamos</a></li>
+            <li><a href="../cuotas/caja1.html"><i class="fa-solid fa-sack-dollar"></i>Cuotas</a></li>
+            <li><a href="../arqueo/arqueo.html"><i class="fas fa-cash-register"></i> Caja </a></li>
+            <li><a href="../configuracion/configuracion.html"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="header-icons">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h2>Agregar Cliente</h2>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="../clientes/index2.html" class="btn btn-info add-new">
+                                    <i class="fa fa-arrow-left"></i> Regresar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form method="post" action="../clientes/preparar.php">
+                        <div class="row">
+                            <div class="col-md-3 form-group">
+                                <label for="nombres">Nombre:</label>
+                                <input type="text" name="nombres" id="nombres" class="form-control" maxlength="100" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="apellidos">Apellido:</label>
+                                <input type="text" name="apellidos" id="apellidos" class="form-control" maxlength="100" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="dni">DNI:</label>
+                                <input type="number" name="dni" id="dni" class="form-control" maxlength="8" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="TipoDNI">Tipo DNI:</label>
+                                <select id="TipoDNI" name="TipoDNI" class="form-control">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="dni">DNI</option>
+                                    <option value="libreta_civica">Libreta Cívica</option>
+                                    <option value="pasaporte">Pasaporte</option>
+                                    <option value="libreta_enrolamiento">Libreta de Enrolamiento</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 form-group">
+                                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control" required>
+                            </div>
+                        <div class="col-md-3 form-group">
+                            <label for="domicilio">Domicilio:</label>
+                            <input type="text" name="domicilio" id="domicilio" class="form-control" maxlength="100" required>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label for="localidad">Localidad:</label>
+                            <input type="text" name="localidad" id="localidad" class="form-control" maxlength="100" required>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label for="provincia">Provincia:</label>
+                            <input type="text" name="provincia" id="provincia" class="form-control" maxlength="100" required>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 form-group">
+                                <label for="codigo_postal">Código Postal:</label>
+                                <input type="text" name="codigo_postal" id="codigo_postal" class="form-control" maxlength="10" required>
+                            </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-6 form-group">
+                                <label for="telefono">Teléfono:</label>
+                                <input type="text" name="telefono" id="telefono" class="form-control" maxlength="15" required>
+                            </div>
+                            
+                            <div class="col-md-3 form-group">
+                                <label for="telefono1">Teléfono 1:</label>
+                                <input type="text" name="telefono1" id="telefono1" class="form-control" maxlength="15" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="telefono2">Teléfono 2:</label>
+                                <input type="text" name="telefono2" id="telefono2" class="form-control" maxlength="15" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="telefono3">Teléfono 3:</label>
+                                <input type="text" name="telefono3" id="telefono3" class="form-control" maxlength="15" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="correo_electronico">Correo electrónico:</label>
+                            <input type="email" name="correo_electronico" id="correo_electronico" class="form-control" maxlength="64" required>
+                        </div>
+                
+                            <div class="col-md-3 form-group">
+                                <label for="puesto">Puesto:</label>
+                                <input type="text" name="puesto" id="puesto" class="form-control" maxlength="100" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="ingresos">Ingresos:</label>
+                                <input type="text" name="ingresos" id="ingresos" class="form-control" maxlength="20" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                                <input type="date" name="fecha_ingreso" id="fecha_ingreso" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 form-group">
+                                <label for="nombre_institucion">Nombre de Institución:</label>
+                                <input type="text" name="nombre_institucion" id="nombre_institucion" class="form-control" maxlength="100" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="ubicacion">Ubicación:</label>
+                                <input type="text" name="ubicacion" id="ubicacion" class="form-control" maxlength="100" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="localidad_empresa">Localidad:</label>
+                                <input type="text" name="localidad_empresa" id="localidad_empresa" class="form-control" maxlength="100" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="localidad_empresa">Provincia:</label>
+                                <input type="text" name="provincia_empresa" id="provincia_empresa" class="form-control" maxlength="100" required>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label for="email_empresa">Correo electrónico Empresa:</label>
+                                <input type="email" name="email_empresa" id="email_empresa" class="form-control" maxlength="64" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 form-group">
+                                <label for="telefono_empresa">Teléfono Empresa:</label>
+                                <input type="text" name="telefono_empresa" id="telefono_empresa" class="form-control" maxlength="15" required>
+                            </div>
+                        </div>
+                        <!--<div class="col-md-3 form-group">
+                            <label for="imagendni">Imagen DNI:</label>
+                            <input type="file" name="imagendni" id="imagendni" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label for="imagendorsodni">Imagen Dorso DNI:</label>
+                            <input type="file" name="imagendorsodni" id="imagendorsodni" class="form-control" required>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label for="boletadeluz">Boleta de Luz:</label>
+                            <input type="file" name="boletadeluz" id="boletadeluz" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3 form-group">
+                            <label for="imagenrecibo">Imagen Recibo:</label>
+                            <input type="file" name="imagenrecibo" id="imagenrecibo" class="form-control" required>
+                        </div>-->
+                        <div class="row mt-3">
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                                <button type="button" class="btn btn-danger">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

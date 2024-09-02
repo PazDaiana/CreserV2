@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Plan</title>
+    <link rel="stylesheet" href="../css/menufijo.css">
+    <link rel="stylesheet" href="../css/caja.css">
+    <link rel="stylesheet" href="../css/estilo2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index principal/index.html">
+                <img src="../Imagenes/LOGO CRESER.jpg" alt="Avatar" class="avatar">
+            </a>
+            <h3>CreSer</h3>
+            <h6><i>Servicio de Créditos Personales</i></h6>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../clientes/index2.html"><i class="fas fa-users"></i> Clientes </a></li>
+            <li><a href="../prestamos/formulario.html"><i class="fas fa-hand-holding-usd"></i> Préstamos</a></li>
+            <li><a href="../cuotas/caja.html" class="activo"><i class="fa-solid fa-sack-dollar"></i> Cuotas</a></li>
+            <li><a href="../arqueo/arqueo.html"><i class="fas fa-cash-register"></i> Caja </a></li>
+            <li><a href="../configuracion/configuracion.html"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="contenedor">
+            <div class="cliente-info">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" value="TORRES MIGUEL RAUL" readonly>
+                <label for="DNI">DNI:</label>
+                <input type="text" id="DNI" value="26848143" readonly>
+                <label for="mostrar-saldo">Mostrar solo Créditos Pendientes</label>
+                <input type="checkbox" id="mostrar-saldo" checked>
+                <label for="saldo">Saldo:</label>
+                <input type="text" id="saldo" value="$297.800,00" readonly>
+            </div>
+            
+            <div class="busqueda">
+                <label for="buscar">Buscar:</label>
+                <input type="search" id="buscar" placeholder="Buscar...">
+            </div>
+
+            <div class="prestamos">
+                <h3>Préstamos</h3>
+                <table id="tabla-prestamos">
+                    <thead>
+                        <tr>
+                            <th>Nro. Préstamo</th>
+                            <th>Fecha</th>
+                            <th>Frecuencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0099</td>
+                            <td>20-05-2022</td>
+                            <td>SEMANAL</td>
+                        </tr>
+                        <!-- Repetir según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="detalle-plan">
+                <h3>Detalle del Plan:</h3>
+                <label for="inicio-credito">F. Inicio Créd:</label>
+                <input type="date" id="inicio-credito" value="2022-05-20">
+
+                <label for="financiera">Financiera:</label>
+                <input type="text" id="financiera" value="SEMANAL" readonly>
+
+                <label for="total-cuotas">Tot. Cuota(s):</label>
+                <input type="number" id="total-cuotas" value="25" readonly>
+
+                <label for="interes-mora">Int. Mora Diario:</label>
+                <input type="number" id="interes-mora" value="0" readonly>
+
+                <label for="cobrador">Cobrador:</label>
+                <input type="text" id="cobrador" value="ALARCON NESTOR" readonly>
+
+                <label for="tolerancia">D. Tolerancia:</label>
+                <input type="number" id="tolerancia" value="0">
+            </div>
+
+            <table id="tabla-plan">
+                <thead>
+                    <tr>
+                        <th>Selecc.</th>
+                        <th>Nro. Cuota</th>
+                        <th>Fecha Plan</th>
+                        <th>D. Semana</th>
+                        <th>F. Últ. Pago</th>
+                        <th>Debe</th>
+                        <th>Haber</th>
+                        <th>Interes Mora</th>
+                        <th>Día(s) Mora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de datos -->
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>4</td>
+                        <td>18-06-2022</td>
+                        <td>Sábado</td>
+                        <td>25-06-2022</td>
+                        <td>$16.200,00</td>
+                        <td>$16.200,00</td>
+                        <td>$0,00</td>
+                        <td>0</td>
+                    </tr>
+                    <!-- Repetir según sea necesario -->
+                </tbody>
+            </table>
+
+            <div class="total-seleccionado">
+                <label for="total">Total:</label>
+                <input type="number" id="total" value="22400" readonly>
+
+                <label for="total-seleccionado">Seleccionado:</label>
+                <input type="number" id="total-seleccionado" value="22400" readonly>
+
+                <label for="total-entregado">Total Entregado:</label>
+                <input type="number" id="total-entregado" value="22400">
+            </div>
+
+            <div class="acciones">
+                <button id="actualizar-entrega">Actualizar Entrega en Crédito</button>
+                <span>Total Crédito: $275.400,00</span>
+            </div>
+
+            <div class="botones">
+                <button id="guardar">Guardar</button>
+                <button id="guardar-imprimir">Imprimir</button>
+                <button id="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/caja.js"></script>
+</body>
+</html>
